@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.share{
+    padding: 2px 5px;
+    background-color: rgb(184, 178, 178);
+    margin:5px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+.waicon{
+
+}
+
+.fbion{
+
+}
+
+.teicon{
+    
+}

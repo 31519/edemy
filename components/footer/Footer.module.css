@@ -1,0 +1,168 @@
+.container {
+  background-color: #222324;
+}
+
+/* FIRST DIV */
+
+.firstDiv {
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height:50px
+}
+
+/* SECOND DIV */
+
+.secondDiv {
+  border-bottom: 1px solid white;
+  display: flex;
+}
+.secondContent1 {
+  width: 20%;
+}
+
+.secondContent2 {
+  width: 20%;
+}
+.secondContent3 {
+  width: 20%;
+}
+
+.brand {
+  width: 40%;
+  /* background-color: white; */
+}
+
+.secondHeader {
+  margin: 10px;
+}
+
+.secondHeaderText {
+  font-size: 15px;
+  font-family: var(---poppins);
+  color: white;
+  font-weight: 700;
+}
+.secondUl {
+  margin: 0px;
+  padding: 0px;
+}
+.secondListDiv {
+  margin: 10px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.secondList {
+  font-family: var(---poppins);
+  font-size: 15px;
+  color: white;
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .secondDiv {
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .secondContent1 {
+    width: 50%;
+  }
+
+  .secondContent2 {
+    width: 50%;
+  }
+  .secondContent3 {
+    width: 50%;
+  }
+
+  .brand {
+    width: 50%;
+    /* background-color: white; */
+  }
+}
+
+/* THIRD DIV */
+
+.thirdDiv {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.thirdContent1,
+.thirdContent2 {
+  margin: 10px;
+  display: flex;
+  cursor: pointer;
+}
+
+.thirdDiv2Div {
+  margin: 0 10px;
+}
+.thirdDiv2Text {
+  font-size: 10px;
+  font-family: var(---poppins);
+  color: white;
+}
+.thirdContent1Text{
+    font-size: 10px;
+    font-family: var(---poppins);
+    color: white;
+}
+
+
+.imageDiv {
+  width: 150px;
+  height: 30px;
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+}
+
+
+/* brand */
+
+.logoContainer{
+  display: flex;
+}
+
+
+.logoDiv{
+  width: 50%;
+  margin: 10px;
+}
+
+.logoImageDiv {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.logoName {
+  margin: 5px;
+  color: #9e9ea2;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  .imageDiv {
+      height: 30px;
+    }
+    .logoImageDiv {
+      width: 50px;
+      height: 50px;
+      position: relative;
+    }
+
+}

@@ -1,16 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../../styles/Home.module.css";
 // import navBar from "../components/navbar";
 // import navbar from "../components/Navbar";
-import Feeds from "../components/Feeds";
+import Feeds from "../../components/Feeds";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useQuery } from "@apollo/client";
-import MetaScreen from "../components/MetaScreen/MetaScreen";
+import MetaScreen from "../../components/MetaScreen/MetaScreen";
 import { LoadingOutlined } from "@ant-design/icons";
 
-import { GET_FEEDS } from "../graphql/queries";
+import { GET_FEEDS } from "../../graphql/queries";
 
 export default function Home() {
   const [feeds, setFeeds] = useState([]);
@@ -55,6 +55,7 @@ export default function Home() {
         currentURL={router.asPath}
         previewImage="/megskill.png"
       />
+      <div className={styles.container}>
         {feedsLoading && (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <LoadingOutlined
@@ -63,9 +64,7 @@ export default function Home() {
             />
           </div>
         )}
-      <div className={styles.container}>
         <Feeds data={feeds} />
-        {/* <Feeds data={feeds} /> */}
       </div>
     </>
   );
