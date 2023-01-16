@@ -84,8 +84,6 @@ export const GET_FEEDS = gql`
           qualification
           salary
           excerpt
-          howToApply
-          importantLink
         }
       }
     }
@@ -103,19 +101,21 @@ export const GET_FEED = gql`
   query GetFeed($id: ID!) {
     feed(id: $id) {
       title
-        uri
-        slug
-        id
+      uri
+      slug
+      id
+      excerpt
+      content
+      date
+      fields {
+        location
+        price
+        qualification
+        salary
         excerpt
-        content
-        date
-        fields {
-            location
-            price
-            qualification
-            salary
-            excerpt
-        }
+        howToApply
+        importantLink
+      }
     }
   }
 `;
