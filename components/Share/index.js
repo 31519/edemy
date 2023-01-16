@@ -14,7 +14,9 @@ const Share = ({ title, url, slug }) => {
       <hr />
       <div className={styles.container}>
         {/* share */}
+        
         <div className={styles.shareDiv}>
+          <span className={styles.header}>Share</span>
           <span className={styles.share}>
             <WhatsappShareButton
               url={url}

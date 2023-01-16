@@ -84,6 +84,8 @@ export const GET_FEEDS = gql`
           qualification
           salary
           excerpt
+          howToApply
+          importantLink
         }
       }
     }

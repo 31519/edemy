@@ -50,7 +50,7 @@ const Feed = ({ feed, slugss }) => {
       description={feed?.fields?.excerpt}
       siteName="www.pyrtajam.com"
       currentURL={router.asPath}
-      previewImage="/megskill.png"
+      previewImage={`${URL}/megskill.png`}
     />
     {!feed && <LoadingOutlined style={{ fontSize: 40 }} spin />}
       <div className={styles.container}>
@@ -59,16 +59,15 @@ const Feed = ({ feed, slugss }) => {
             key={feed.title}
             title={feed.title}
             date={feed.date}
-            // excerpt={feed && feed.fields.excerpt}
+            excerpt={feed?.fields?.excerpt}
             location={feed?.fields?.location}
             salary={feed?.fields?.salary}
-            // detail={feed.detail}
             type={feed?.type}
             qualification={feed?.fields?.qualification}
-            // description={feed.description}
-            slug={feed.slug}
             id={feed.id}
             content={feed.content}
+            howToApply={feed?.fields?.howToApply}
+            importantLink={feed?.fields?.importantLink}
           />
         )}
       </div>

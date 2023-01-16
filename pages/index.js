@@ -61,7 +61,7 @@ const URL = `${origin}${router.asPath}`;
         description="MegSkill meghalaya best online Job Portal Platform "
         siteName="www.pyrtajam.com"
         currentURL={router.asPath}
-        previewImage="/megskill.png"
+        previewImage={`${URL}/megskill.png`}
       />
         {feedsLoading && (
           <div style={{ display: "flex", justifyContent: "center" }}>

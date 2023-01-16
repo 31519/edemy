@@ -14,16 +14,14 @@ const DetailList = ({
   excerpt,
   location,
   salary,
-  detail,
   type,
   qualification,
-  description,
   hiringFrom,
-  mode,
   slug,
   date,
-  id,
   content,
+  howToApply,
+  importantLink,
 }) => {
   const router = useRouter();
 
@@ -39,6 +37,13 @@ const DetailList = ({
       <div className={styles.titleDiv}>
         <h1 className={styles.header}>{title}</h1>
       </div>
+      {/* excerpt */}
+      {excerpt && (
+        <div className={styles.detailDiv}>
+          {/* <h1 className={styles.header}>How To Apply</h1> */}
+          <p>{excerpt}</p>
+        </div>
+      )}
       {/* location */}
       {location && (
         <div className={styles.locationDiv}>
@@ -79,7 +84,7 @@ const DetailList = ({
       {/* <ReactMarkdown children={content}  /> */}
       {content && (
         <div className={styles.detailDiv}>
-          <h1 className={styles.header}>Job Detail</h1>
+          <h1 className={styles.header}>Detail</h1>
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       )}
@@ -91,17 +96,27 @@ const DetailList = ({
         </div>
       )}
 
+      {howToApply && (
+        <div className={styles.detailDiv}>
+          <h1 className={styles.header}>How To Apply</h1>
+          <div dangerouslySetInnerHTML={{ __html: howToApply }} />
+        </div>
+      )}
+
+      {importantLink && (
+        <div className={styles.detailDiv}>
+          <h1 className={styles.header}>Important Link</h1>
+          <div dangerouslySetInnerHTML={{ __html: importantLink }} />
+        </div>
+      )}
+
       {/* Hiring from */}
       <div className={styles.fromDiv}>
         <p className={styles.from}>{hiringFrom}</p>
       </div>
       {/* share */}
       <div className={styles.shareDiv}>
-        <Share
-          url={URL}
-          slug={slug}
-          title={title}
-        />
+        <Share url={URL} slug={slug} title={title} />
       </div>
     </div>
   );

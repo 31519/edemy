@@ -1,12 +1,20 @@
 .container{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+
+}
+.header{
+    font-size: 30px;
+    padding: 5px 10px;
+    color: black;
+    font-weight: 900;
 
 }
 
 .share{
     padding: 2px 5px;
-    background-color: rgb(184, 178, 178);
+    /* background-color: rgb(184, 178, 178); */
     margin:5px;
     border-radius: 3px;
     cursor: pointer;
