@@ -21,7 +21,7 @@ const Share = ({ title, url, slug }) => {
             <WhatsappShareButton
               url={url}
               title={title}
-              separator=""
+              separator=" "
             >
               <FaWhatsappSquare className={styles.waicon} size={32} round />
             </WhatsappShareButton>

@@ -66,8 +66,8 @@ const Feed = ({ feed, slugss }) => {
             qualification={feed?.fields?.qualification}
             id={feed.id}
             content={feed.content}
-            howToApply={feed?.fields?.howToApply}
-            importantLink={feed?.fields?.importantLink}
+            howToApply={feed?.fields?.howtoapply}
+            importantLink={feed?.fields?.importantlink}
           />
         )}
       </div>
