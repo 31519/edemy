@@ -3,7 +3,7 @@ import Share from "../Share";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
-
+import { useRouter } from "next/router";
 import { ImLocation2 } from "react-icons/im";
 import { ImPriceTags } from "react-icons/im";
 import { MdDateRange } from "react-icons/md";
@@ -25,6 +25,14 @@ const DetailList = ({
   id,
   content,
 }) => {
+  const router = useRouter();
+
+  const origin =
+    typeof window !== "undefined" && window.location.origin
+      ? window.location.origin
+      : "";
+
+  const URL = `${origin}${router.asPath}`;
   return (
     <div className={styles.container}>
       {/* title */}
@@ -70,17 +78,17 @@ const DetailList = ({
       {/* excert */}
       {/* <ReactMarkdown children={content}  /> */}
       {content && (
-        <>
+        <div className={styles.detailDiv}>
           <h1 className={styles.header}>Job Detail</h1>
           <div dangerouslySetInnerHTML={{ __html: content }} />
-        </>
+        </div>
       )}
 
       {qualification && (
-        <>
+        <div className={styles.detailDiv}>
           <h1 className={styles.header}>Qualifications</h1>
           <div dangerouslySetInnerHTML={{ __html: qualification }} />
-        </>
+        </div>
       )}
 
       {/* Hiring from */}
@@ -90,7 +98,7 @@ const DetailList = ({
       {/* share */}
       <div className={styles.shareDiv}>
         <Share
-          url={`http://localhost:3000/feeds/${id}`}
+          url={URL}
           slug={slug}
           title={title}
         />

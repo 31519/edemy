@@ -16,7 +16,7 @@ const sidebarLink = [
   },
   {
     title: "Jobs",
-    link: "/aboutus",
+    link: "/",
   },
   {
     title: "About Us",

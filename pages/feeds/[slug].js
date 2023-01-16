@@ -13,11 +13,13 @@ import { GET_FEED } from "../../graphql/queries";
 
 const Feed = ({ feed, slugss }) => {
   const router = useRouter();
-  const { slug } = router.query;
-  // const [feed, setFeed] = useState([]);
-  const [educations, setEducations] = useState([]);
-  console.log("feed", feed);
-  console.log("slug", slugss)
+
+  const origin =
+    typeof window !== "undefined" && window.location.origin
+      ? window.location.origin
+      : "";
+
+  const URL = `${origin}${router.asPath}`;
 
 
   // Jobs

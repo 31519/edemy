@@ -16,3 +16,9 @@ p {
   color:#374151;
   letter-spacing: 0.8px;
 }
+
+@media (max-width: 600px) {
+  p {
+    font-size: 15px;
+  }
+  }

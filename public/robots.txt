@@ -1,0 +1,15 @@
+# *
+User-agent: *
+Disallow: /secret
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://wwww.megskill.com
+
+# Sitemaps
+Sitemap: https://wwww.megskill.com/sitemap.xml
+Sitemap: https://wwww.megskill.com/sitemap-0.xml
+Sitemap: https://wwww.megskill.com/server-sitemap

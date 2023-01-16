@@ -2,3 +2,7 @@
 .next
 node_modules
 .env.local
+
+/bublic/robots.txt
+/bublic/sitemap.xml
+/bublic/sitemap-0.xml

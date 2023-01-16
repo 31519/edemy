@@ -13,15 +13,10 @@ function MetaScreen({
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
         <meta charSet="utf-8" />
-
         <meta name="description" content={description}></meta>
-
         <meta property="og:title" content={pageTitle} key="ogtitle" />
-
         <meta property="og:description" content={description} key="ogdesc" />
-
         <title>{pageTitle}</title>
         {/* Twitter */}
         <meta name="twitter:card" content="summary" key="twcard" />

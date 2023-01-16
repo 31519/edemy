@@ -13,14 +13,25 @@
 
 }
 
+.shareDiv{
+    display:flex;
+    flex-direction: row;
+}
+
+
+
 .waicon{
+    color: green;
 
 }
 
-.fbion{
+.fbicon{
+    color:blue
+
 
 }
 
 .teicon{
+    color: rgb(21, 197, 250);
     
 }

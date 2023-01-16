@@ -19,6 +19,14 @@ export default function Home() {
 
   const { q: query } = router.query;
 
+  // url
+  const origin =
+  typeof window !== "undefined" && window.location.origin
+    ? window.location.origin
+    : "";
+
+const URL = `${origin}${router.asPath}`;
+
   const {
     loading: feedsLoading,
     error: feedsError,

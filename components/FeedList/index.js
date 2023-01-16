@@ -3,6 +3,7 @@ import Share from "../Share";
 import Link from "next/link";
 // import Date from "../Date/Date";
 import Moment from "react-moment";
+import {useRouter} from 'next/router'
 
 import { ImLocation2 } from "react-icons/im";
 import { ImPriceTags } from "react-icons/im";
@@ -23,6 +24,8 @@ const FeedList = ({
   date,
   id,
 }) => {
+  const router = useRouter()
+  console.log("router", router)
   return (
     <Link className={styles.link} href={`/feeds/${id}`}>
       <div className={styles.container}>
@@ -73,9 +76,9 @@ const FeedList = ({
           <p className={styles.from}>{hiringFrom}</p>
         </div>
         {/* share */}
-        <div className={styles.shareDiv}>
+        {/* <div className={styles.shareDiv}>
           <Share url={`http://localhost:3000/feeds/${id}`} slug={slug} title={title}/>
-        </div>
+        </div> */}
       </div>
     </Link>
   );
