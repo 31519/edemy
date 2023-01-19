@@ -93,7 +93,7 @@ const Detail = ({
       )}
 
       {images && (
-        <>
+        <div className={styles.imageContainer}>
           {images.map((d, index) => (
             <div className={styles.imageDiv}>
               <Image
@@ -104,7 +104,7 @@ const Detail = ({
               />
             </div>
           ))}
-        </>
+        </div>
       )}
 
       {qualification && (

@@ -110,12 +110,19 @@
   width: 1000px;
   position: relative;
   height: 400px;
-  margin: 10px;
+  margin: 10px 0px;
 }
 
 .image {
   object-fit: cover;
   width: 100%;
+}
+
+.imageContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media (max-width: 600px) {
