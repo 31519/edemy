@@ -12,6 +12,7 @@ module.exports = {
       `${siteUrl}/sitemap-0.xml`,
       `${siteUrl}/sitemap.xml`,
       `${siteUrl}/server-sitemap`,
+      `${siteUrl}/server-sitemap/education`,
     ],
   },
   exclude: ["*/secret"],

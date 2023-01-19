@@ -13,3 +13,4 @@ Host: https://wwww.megskill.com
 Sitemap: https://wwww.megskill.com/sitemap.xml
 Sitemap: https://wwww.megskill.com/sitemap-0.xml
 Sitemap: https://wwww.megskill.com/server-sitemap
+Sitemap: https://wwww.megskill.com/server-sitemap/education
