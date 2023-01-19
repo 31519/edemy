@@ -34,7 +34,7 @@ const URL = `${origin}${router.asPath}`;
   } = useQuery(GET_FEEDS, {
     variables: {
       title: `${keyword}`,
-      category: "Jobs",
+      category: "",
     },
   });
 

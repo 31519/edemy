@@ -101,9 +101,15 @@ function Footer() {
               </Link>
               <Link
                 className={style.link}
-                href={`/`}
+                href={`/education?cat=Questions`}
               >
                 <li className={style.secondList}>Quesion Paper</li>
+              </Link>
+              <Link
+                className={style.link}
+                href={`/education?cat=Syllabus`}
+              >
+                <li className={style.secondList}>Syllabus</li>
               </Link>
               <Link
                 className={style.link}

@@ -1,0 +1,112 @@
+.container {
+    border-radius: 5px;
+    border:2px solid rgb(207, 207, 214);
+    margin:20px;
+    padding:10px
+    
+}
+.container:hover{
+    border:2px solid rgb(28, 184, 204);
+
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover{
+    text-decoration: none;
+    color: black;
+
+}
+
+.title{
+    font-size: 25px;
+    font-weight: 900;
+
+}
+
+.type{
+    background-color: rgb(209, 207, 207);
+    color:rgb(31, 30, 30);
+    padding: 5px;
+    margin:3px;
+    /* margin-left: 10px; */
+
+    border-radius: 3px;
+
+}
+
+.salary{
+    background-color: rgb(209, 207, 207);
+    color:rgb(31, 30, 30);
+    padding: 5px;
+    margin:3px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.salaryDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dateDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.locationDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mixed{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.location{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(65, 63, 63);
+    /* margin-bottom: 10px; */
+}
+.date{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(65, 63, 63);
+    margin-bottom: 10px;
+}
+
+.excert{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(65, 63, 63);
+    margin-bottom: 10px;
+}
+
+.icons {
+    font-size:25px;
+    color: blue;
+    margin:5px;
+}
+.iconsL {
+    font-size:25px;
+    color: rgb(143, 57, 90);
+    margin:5px;
+}
+.iconsD {
+    font-size:20px;
+    color: rgb(20, 182, 232);
+    margin:5px;
+}
+.iconsS {
+    font-size:25px;
+    color: rgb(8, 250, 0);
+    margin:5px;
+    
+}

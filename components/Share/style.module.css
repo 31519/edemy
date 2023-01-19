@@ -24,17 +24,18 @@
 .shareDiv{
     display:flex;
     flex-direction: row;
+    align-items: center;
 }
 
 
 
 .waicon{
-    color: green;
+    color:  #77df77
 
 }
 
 .fbicon{
-    color:blue
+    color:#0570f9;
 
 
 }

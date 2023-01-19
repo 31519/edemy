@@ -19,6 +19,14 @@ const sidebarLink = [
     link: "/",
   },
   {
+    title: "Syllabus",
+    link: "/education?cat=Syllabus",
+  },
+  {
+    title: "Question",
+    link: "/education?cat=Questions",
+  },
+  {
     title: "About Us",
     link: "/aboutus",
   },

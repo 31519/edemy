@@ -19,6 +19,14 @@ export default function Home() {
 
   const { q: query } = router.query;
 
+  // url
+  const origin =
+  typeof window !== "undefined" && window.location.origin
+    ? window.location.origin
+    : "";
+
+const URL = `${origin}${router.asPath}`;
+
   const {
     loading: feedsLoading,
     error: feedsError,
@@ -53,9 +61,8 @@ export default function Home() {
         description="MegSkill meghalaya best online Job Portal Platform "
         siteName="www.pyrtajam.com"
         currentURL={router.asPath}
-        previewImage="/megskill.png"
+        previewImage={`${URL}/megskill.png`}
       />
-      <div className={styles.container}>
         {feedsLoading && (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <LoadingOutlined
@@ -64,7 +71,9 @@ export default function Home() {
             />
           </div>
         )}
+      <div className={styles.container}>
         <Feeds data={feeds} />
+        {/* <Feeds data={feeds} /> */}
       </div>
     </>
   );
