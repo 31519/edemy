@@ -7,6 +7,8 @@ export const GET_PROPERTIES = gql`
     properties(
       where: {
         title: $title
+        
+
         metaQuery: {
           relation: AND
           metaArray: {
@@ -50,35 +52,28 @@ export const GET_PROPERTIES = gql`
 // Feeds
 // where: {categoryName: "Educations", metaQuery: {metaArray: {key: "class", value: "9"}}}
 export const GET_FEEDS = gql`
-  query GetFeeds($title: String, $category: String, $class: String, $year:String, $subject:String) {
-    feeds(where:
-        {
-       categoryName: $category,
-       search: $title,
-       metaQuery: {
-        relation: OR
-        metaArray: 
-        [{
-          key: "class",
-          value: $class,
-          type: CHAR, 
-          compare: LIKE
-        },{
-          key: "year",
-          value: $year,
-          type: CHAR, 
-          compare: LIKE
-        },{
-          key: "subject",
-          value: $subject,
-          type: CHAR, 
-          compare: LIKE
+  query GetFeeds(
+    $title: String
+    $category: String
+    $class: String
+    $year: String
+    $subject: String
+  ) {
+    feeds(
+      where: {
+        categoryName: $category
+        search: $title
+        
+        metaQuery: {
+          relation: OR
+          metaArray: [
+            { key: "class", value: $class, type: CHAR, compare: LIKE }
+            { key: "year", value: $year, type: CHAR, compare: LIKE }
+            { key: "subject", value: $subject, type: CHAR, compare: LIKE }
+          ]
         }
-        ]
       }
-    }
-       
-     ) {
+    ) {
       nodes {
         title
         uri
@@ -97,6 +92,7 @@ export const GET_FEEDS = gql`
           salary
           excerpt
         }
+        
       }
     }
   }
@@ -139,8 +135,8 @@ export const GET_FEED = gql`
       date
       fields {
         images {
-            sourceUrl
-          }
+          sourceUrl
+        }
         location
         price
         qualification

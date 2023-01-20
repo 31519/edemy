@@ -1,0 +1,70 @@
+.container {
+  border-radius: 5px;
+  display: flex;
+  margin: 20px;
+  overflow-x: scroll;
+}
+.link {
+  text-decoration: none;
+}
+
+.mainDiv {
+  margin: 10px;
+}
+
+.imageDiv {
+  width: 100px;
+  position: relative;
+  height: 100px;
+  margin: 10px;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+}
+
+.header {
+  font-size: 30px;
+  margin: 10px 20px;
+  color: black;
+}
+
+.title {
+  color: black;
+  font-size: 20px;
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    border-radius: 5px;
+    display: flex;
+    overflow-x: scroll;
+  }
+  .image {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .imageDiv {
+    width: 80px;
+    position: relative;
+    height: 80px;
+  }
+  .header {
+    font-size: 20px;
+    margin: 10px 20px;
+    color: black;
+  }
+
+  .title {
+    color: black;
+    font-size: 16px;
+    margin: 5px;
+  }
+  .mainDiv {
+    margin: 0px;
+  }
+  
+}

@@ -5,6 +5,11 @@ import FeedList from "../FeedList";
 const Feeds = ({ data }) => {
   return (
     <div className={styles.container}>
+      {!data.length && (
+        <div className={styles.dataLength}>
+          <h1 className={styles.dataLengthText}>No data..</h1>
+        </div>
+      )}
       {/* <div>Feeds</div> */}
       <div className={styles.listDiv}>
         {data &&

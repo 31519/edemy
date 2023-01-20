@@ -70,6 +70,12 @@ export default function Question() {
       setCategory("")
     }
 
+    if (cls){
+      setClassState(cls)
+    } else {
+      setClassState("")
+    }
+
     // if (sub){
     //   setSubState(sub)
     // } else {
@@ -110,6 +116,11 @@ export default function Question() {
       {feedsLoading && (
         <div style={{ display: "flex", justifyContent: "center" }}>
           <LoadingOutlined style={{ fontSize: 40, textAlign: "center" }} spin />
+        </div>
+      )}
+      {feeds.length === 0 && (
+        <div className={styles.dataLength}>
+          <h1 className={styles.dataLengthText}>No data..</h1>
         </div>
       )}
       <div className={styles.container}>

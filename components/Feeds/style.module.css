@@ -10,6 +10,17 @@
     width: 50%;
 }
 
+.dataLength{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin:20px
+}
+
+.dataLengthText{
+    color:black;
+}
+
 @media (max-width: 600px) {
     .container {
         display: block;
