@@ -26,7 +26,7 @@ const Login = () => {
   const router = useRouter();
 
   useEffect(() => {
-    if (user !== null) router.push("/");
+    if (user !== null) router.back();
   }, [user]);
 
   // console.log("State", state)

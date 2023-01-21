@@ -28,9 +28,9 @@ function ErrorPage() {
             />
           </div>
           <div className={style.buttonDiv}>
-            <Link href="/">
-              <button className={style.button}>Back</button>
-            </Link>
+            {/* <Link href={router.back()}> */}
+              <button onClick={() => router.back()} className={style.button}>Back</button>
+            {/* </Link>  */}
           </div>
         </div>
         {/* from instagram */}

@@ -20,7 +20,7 @@ const Register = () => {
   const { user } = state;
 
   useEffect(() => {
-    if (user !== null) router.push("/");
+    if (user !== null) router.push(window.history.back());
   }, [user]);
 
   // Handle submit
