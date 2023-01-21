@@ -51,14 +51,16 @@ const Register = () => {
     <>
       <div className={styles.container}>
         <div className={styles.div1}>
-          <div><h2 className={styles.span1}>Create Account.</h2></div>
-          <div> <h2 className={styles.span2}>Start Learning.</h2></div>
-          <div><h2 className={styles.span3}>With Hundred of Studen.</h2></div>
-          <div><h2 className={styles.span4}>Happy Learning.</h2></div>
+          <h2 className={styles.div1Header}>
+            <span className={styles.span1}>Create Account.</span>
+            <span className={styles.span2}>Start Learning.</span>
+            <span className={styles.span3}>With Hundred of Student.</span>
+            <span className={styles.span4}>Happy Learning.</span>
+          </h2>
         </div>
         <div className={styles.div2}>
           <h className={styles.headerRegister}>Register</h>
-          <hr/>
+          <hr />
           <form onSubmit={handleSubmit}>
             <label>Name</label>
             <input
@@ -99,10 +101,9 @@ const Register = () => {
         </div>
       </div>
       <div className={styles.notRegister}>
-
-      <p className="text-center p-3">
-        Already registered ? <Link href="/login">Login</Link>
-      </p>
+        <p className="text-center p-3">
+          Already registered ? <Link href="/login">Login</Link>
+        </p>
       </div>
     </>
   );
