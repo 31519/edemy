@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.div1 {
+    display: flex;
+    justify-content: center;
+}
+
+.div2{
+    display: flex;
+    justify-content: center;
+}

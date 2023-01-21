@@ -4,7 +4,7 @@ import "antd/dist/reset.css";
 import "../public/css/styles.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import { Provider } from "../context";
+import { Provider } from "../context";
 import "../styles/globals.css";
 import {
   ApolloClient,
@@ -24,7 +24,7 @@ const client = new ApolloClient({
 
 function MyApp({ Component, pageProps }) {
   return (
-    // <Provider>
+    <Provider>
       <ApolloProvider client={client}>
         <ToastContainer position="top-center" />
         {/* <TopNav /> */}
@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
         <Footer />
       </ApolloProvider>
-    // </Provider>
+    </Provider>
   );
 }
 
