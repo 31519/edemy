@@ -10,6 +10,8 @@ import styles from "../styles/register.module.css";
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [gender, setGender] = useState("");
+  const [address, setAddress] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   // router
@@ -20,7 +22,7 @@ const Register = () => {
   const { user } = state;
 
   useEffect(() => {
-    if (user !== null) router.push(window.history.back());
+    if (user !== null) router.back();
   }, [user]);
 
   // Handle submit
@@ -34,12 +36,17 @@ const Register = () => {
         name,
         email,
         password,
+        gender,
+        address
       });
       toast.success("Registration successfull. Please login");
       setName("");
       setEmail("");
       setPassword("");
+      setGender("")
+      setAddress("")
       setLoading(false);
+      router.push('/login')
     } catch (err) {
       toast.error(err.response.data);
       setLoading(false);
@@ -80,6 +87,26 @@ const Register = () => {
               placeholder="Enter Email"
               required
             />
+            <label>Address</label>
+            <input
+              type="text"
+              className={styles.inputField}
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              placeholder="Enter Address"
+            />
+            <label>Gender</label>
+            <select name="Gender"
+              type="email"
+              className={styles.inputField}
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+              >
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+
+            </select>
+            
             <label>Password</label>
             <input
               type="password"

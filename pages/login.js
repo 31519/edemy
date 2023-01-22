@@ -52,10 +52,10 @@ const Login = () => {
       // save in local storage
       window.localStorage.setItem("user", JSON.stringify(data));
       // redirect
-      router.push("/user");
+      router.back();
       toast.success("Login successfull");
 
-      //   setLoading(false);
+      setLoading(false);
     } catch (err) {
       toast.error(err.response.data);
       setLoading(false);
@@ -88,7 +88,7 @@ const Login = () => {
                 placeholder="Enter Email"
                 required
               />
-              <MailOutlined style={{ fontSize: "25px", padding:"5px" }} />
+              <MailOutlined style={{ fontSize: "25px", padding: "5px" }} />
             </div>
             <label>Password</label>
             <div className={styles.password}>
@@ -102,12 +102,12 @@ const Login = () => {
               />
               {visible ? (
                 <EyeInvisibleOutlined
-                  style={{ fontSize: "25px", padding:"5px" }}
+                  style={{ fontSize: "25px", padding: "5px" }}
                   onClick={() => setVisible(!visible)}
                 />
               ) : (
                 <EyeOutlined
-                  style={{ fontSize: "25px", padding:"5px" }}
+                  style={{ fontSize: "25px", padding: "5px" }}
                   onClick={() => setVisible(!visible)}
                 />
               )}
