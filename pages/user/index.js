@@ -11,6 +11,7 @@ const UserIndex = () => {
     state: { user },
   } = useContext(Context);
   const [courses, setCourses] = useState([]);
+  // const [user, setUser] = useState([])
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {

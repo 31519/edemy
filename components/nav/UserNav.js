@@ -14,53 +14,7 @@ import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 
 import Link from "next/link";
 
-const settings = [
-  {
-    name: "Dashboard",
-    link: "/user",
-    image: "./megskill.png",
-  },
-  {
-    name: "My Course",
-    link: "/mycourse",
-    image: "./megskill.png",
-  },
-  {
-    name: "My Cart",
-    link: "/mycart",
-    image: "./megskill.png",
-  },
-  {
-    name: "Become Teacher",
-    link: "/instructor",
-    image: "./megskill.png",
-  },
-  {
-    name: "My Course",
-    link: "/mycourse",
-    image: "./megskill.png",
-  },
-  {
-    name: "Account Setting",
-    link: "/account-setting",
-    image: "./megskill.png",
-  },
-  {
-    name: "Purchased Setting",
-    link: "/purchased-setting",
-    image: "./megskill.png",
-  },
-  {
-    name: "Edit Profile",
-    link: "/edit-profile",
-    image: "./megskill.png",
-  },
-  {
-    name: "Logout",
-    link: "/logout",
-    image: "./megskill.png",
-  },
-];
+
 
 const UserNav = () => {
   const [current, setCurrent] = useState("");
@@ -118,7 +72,7 @@ const UserNav = () => {
           </Link>
         </li>
         <li className={styles.list}>
-          <Link className={styles.link} href="/instructor">
+          <Link className={styles.link} href="/user/instructor-signup">
             <span className={styles.spanIcon}>
               <LaptopOutlined className={styles.icon} />
             </span>
