@@ -1,0 +1,66 @@
+.headerDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding:10px
+}
+
+.contentDivHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.changeButton{
+    border-radius:5px;
+    background-color: purple;
+    color: white;
+}
+
+
+.spanName{
+    color: blue;
+}
+
+
+
+@media (max-width: 800px) {
+
+    .headerDiv{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding:10px
+    }
+    
+    .contentDivHeader{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .changeButton{
+        border-radius:5px;
+        background-color: purple;
+        color: white;
+    }
+
+    .detailHeader{
+        font-size: 18px;
+    }
+    
+    
+    .spanName{
+        color: blue;
+    }
+
+    .detailValue{
+        font-size: 14px;
+    }
+    
+    
+      
+    }
+
+
+

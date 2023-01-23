@@ -1,5 +1,6 @@
 .container {
     min-height: 90vh;
+    z-index: 2222;
     
 }
 
@@ -7,19 +8,24 @@
   display: flex;
   justify-content: start;
   /* width: 100%; */
-  background: #dff2f4;
+  background: #f2f2f2;
+  position: relative;
   min-height: 90vh;
   flex-direction: column;
   margin-left: 5px;
+  z-index: 22;
+
 }
 .navigation2 {
   display: flex;
   justify-content: start;
   width: 60px;
-  background: #dff2f4;
+  background: #f2f2f2;
+  position: relative;
   min-height: 90vh;
   flex-direction: column;
   margin-left: 5px;
+  z-index: 22;
 }
 
 .spanName2 {
@@ -101,7 +107,8 @@
   .navigation1 {
     display: flex;
     /* width: 80%; */
-    background: #dff2f4;
+    background: #f2f2f2;
+    position: relative;
     min-height: 70vh;
     flex-direction: column;
     justify-content: start;
@@ -111,7 +118,8 @@
   .navigation2 {
     display: flex;
     width: 60px;
-    background: #dff2f4;
+    background: #f2f2f2;
+    position: relative;
     min-height: 70vh;
     flex-direction: column;
     justify-content: start;

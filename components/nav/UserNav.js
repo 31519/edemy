@@ -129,7 +129,7 @@ const UserNav = () => {
         </li>
         <hr />
         <li className={styles.list}>
-          <Link className={styles.link} href="/acount-setting">
+          <Link className={styles.link} href="/user/profile/account-setting">
             <span className={styles.spanIcon}>
               <SettingOutlined className={styles.icon} />
             </span>
@@ -150,7 +150,7 @@ const UserNav = () => {
         </li>
         <hr />
         <li className={styles.list}>
-          <Link className={styles.link} href="/edit-profile">
+          <Link className={styles.link} href="/user/profile/edit-profile">
             <span className={styles.spanIcon}>
               <UserOutlined className={styles.icon} />
             </span>
