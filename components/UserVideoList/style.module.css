@@ -1,0 +1,89 @@
+.courseDiv {
+    display: flex;
+    flex-direction: row;
+    background: #edf8fb;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    
+  }
+  
+  .courseDiv:hover .name{
+      color: blue;
+  
+  }
+  
+  .link {
+    text-decoration: none;
+  }
+  
+  .name {
+    color: black;
+  }
+  
+  .imageDiv {
+    width: 300px;
+    height: 200px;
+    position: relative;
+  }
+  
+  .image {
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .div2 {
+    padding: 15px 10px;
+  }
+  
+  .danger{
+      color: red;
+  }
+  .success{
+      color: green;
+  
+  }
+  .primary{
+      color: rgb(14, 212, 243);
+  }
+
+  .lesson{
+
+  }
+  .instructor{
+    font-size: 14px;
+padding: 0px;
+margin: 0px;
+line-height: 0px;
+    
+  }
+  
+  @media (max-width: 800px) {
+    .courseDiv {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .div1 {
+      width: 100%;
+      height: 200px;
+    }
+    .imageDiv {
+      width: 100%;
+      height: 150px;
+      position: relative;
+    }
+  
+    .image {
+      object-fit: cover;
+      width: 100%;
+    }
+    .name {
+      color: black;
+      font-size: 16px;
+      letter-spacing: 1.2px;
+    }
+
+
+  }
+  

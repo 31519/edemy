@@ -4,6 +4,7 @@ import UserRoute from "../../components/routes/UserRoute";
 import axios from "axios";
 import { Avatar } from "antd";
 import Link from "next/link";
+import UserVideoList from "../../components/UserVideoList"
 import { SyncOutlined, PlayCircleOutlined } from "@ant-design/icons";
 
 const UserIndex = () => {
@@ -42,7 +43,8 @@ const UserIndex = () => {
       <h1 className="jumbotron text-center square">User Dashboard</h1>
 
       {/* show list of courses */}
-      {courses &&
+      <UserVideoList courses={courses}/>
+      {/* {courses &&
         courses.map((course) => (
           <div key={course._id} className="media pt-2 pb-1">
             <Avatar
@@ -78,7 +80,7 @@ const UserIndex = () => {
               </div>
             </div>
           </div>
-        ))}
+        ))} */}
     </UserRoute>
   );
 };

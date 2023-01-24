@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { SyncOutlined } from "@ant-design/icons";
 import styles from "./UserRoute.module.css";
-
-
 import axios from "axios";
 import { useRouter } from "next/router";
 

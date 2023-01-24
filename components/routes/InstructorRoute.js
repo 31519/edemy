@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { SyncOutlined } from "@ant-design/icons";
-
+import styles from "./InstructorRoute.module.css";
 import axios from "axios";
 import { useRouter } from "next/router";
 
@@ -36,12 +36,12 @@ const InstructorRoute = ({ children }) => {
           className="d-flex justify-content-center display-1 text-primary p-5"
         />
       ) : (
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-2">
+        <div className={styles.container}>
+          <div className={styles.div1}>
+            <div className={styles.userNav}>
               <InstuctorNav  />
             </div>
-            <div className="col-md-10">{children}</div>
+            <div className={styles.childrenDiv}>{children}</div>
           </div>
         </div>
       )}

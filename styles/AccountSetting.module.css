@@ -1,66 +1,117 @@
-.headerDiv{
+.headerDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.contentDivHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.changeButton {
+  border-radius: 5px;
+  background-color: purple;
+  color: white;
+  border: none;
+}
+
+.spanName {
+  color: blue;
+}
+
+.contentAbout {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.detailValue {
+  font-size: 16px;
+}
+
+.inputField {
+  width: 100%;
+  margin: 5px 2px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #c1bfbf;
+}
+
+.buttonField {
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid #c1bfbf;
+  height: 40px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-image: linear-gradient(90deg, #0f9178, #19a1b7, #f706d2);
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  margin: 10px 0px;
+}
+
+.passwordChange {
+  display: flex;
+  flex-direction: column;
+}
+
+.passwordDiv1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+@media (max-width: 800px) {
+  .headerDiv {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding:10px
-}
+    padding: 10px;
+  }
 
-.contentDivHeader{
+  .contentDivHeader {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+  }
 
-.changeButton{
-    border-radius:5px;
+  .changeButton {
+    border-radius: 5px;
     background-color: purple;
     color: white;
-}
+    border: none;
+    font-size: 14px;
+  }
 
+  .detailHeader {
+    font-size: 18px;
+  }
 
-.spanName{
+  .spanName {
     color: blue;
+  }
+
+  .detailValue {
+    font-size: 14px;
+  }
+
+  .passwordDiv1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: start;
+  }
 }
-
-
-
-@media (max-width: 800px) {
-
-    .headerDiv{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding:10px
-    }
-    
-    .contentDivHeader{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    .changeButton{
-        border-radius:5px;
-        background-color: purple;
-        color: white;
-    }
-
-    .detailHeader{
-        font-size: 18px;
-    }
-    
-    
-    .spanName{
-        color: blue;
-    }
-
-    .detailValue{
-        font-size: 14px;
-    }
-    
-    
-      
-    }
-
-
-
