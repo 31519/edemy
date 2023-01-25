@@ -5,6 +5,7 @@ import { SyncOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import { Context } from "../context";
 import { useRouter } from "next/router";
+import styles from "../styles/ForgotPassword.module.css";
 
 const ForgotPassword = () => {
   // state
@@ -56,7 +57,9 @@ const ForgotPassword = () => {
       setEmail("");
       setCode("");
       setNewPassword("");
+      setSuccess(false)
       setLoading(false);
+      router.push("/login")
       toast("Password reset successfully");
     } catch (err) {
       setLoading(false);
@@ -65,15 +68,16 @@ const ForgotPassword = () => {
   };
 
   return (
-    <>
-      <h1 className="jumbotron text-center bg-primary square">
-        Forgot Password
-      </h1>
+    <div className={styles.container}>
+      <div className={styles.headerDiv}>
+        <h1 className={styles.headerText}>Forgot Password</h1>
+      </div>
+
       <div className="container col-md-4 offset-md-4 pb-5">
         <form onSubmit={success ? handleResetPassword : handleSubmit}>
           <input
             type="email"
-            className="form-control mb-4 p-2"
+            className={styles.inputField}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter email"
@@ -83,7 +87,7 @@ const ForgotPassword = () => {
             <>
               <input
                 type="text"
-                className="form-control  mb-4 p-2"
+                className={styles.inputField}
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
                 placeholder="Enter secret code"
@@ -91,7 +95,7 @@ const ForgotPassword = () => {
               />
               <input
                 type="password"
-                className="form-control mb-4 p-2 "
+                className={styles.inputField}
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
                 placeholder="Enter new password"
@@ -102,13 +106,13 @@ const ForgotPassword = () => {
           <button
             type="submit"
             disabled={loading || !email}
-            className="btn btn-primary btn-block p-2"
+            className={styles.buttonField}
           >
             {loading ? <SyncOutlined spin /> : "Submit"}
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

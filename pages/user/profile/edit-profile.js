@@ -18,6 +18,8 @@ const EditProfile = () => {
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
+  const [gender, setGender] = useState("");
+
 
   useEffect(() => {
     loadUser();
@@ -32,6 +34,7 @@ const EditProfile = () => {
       if (data) {
         setName(data.name);
         setAddress(data.address);
+        setGender(data.gender)
       }
       setLoading(false);
     } catch (err) {
@@ -89,6 +92,16 @@ const EditProfile = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Name"
+            />
+          </div>
+          <label>Gender</label>
+          <div className={styles.password}>
+            <input
+              type="text"
+              className={styles.inputField}
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+              placeholder="Address"
             />
           </div>
           <label>Address</label>
