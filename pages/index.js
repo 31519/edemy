@@ -180,6 +180,7 @@ const URL = `${origin}${router.asPath}`;
         currentURL={router.asPath}
         previewImage={`${URL}/megskill.png`}
       />
+      <CourseList/>
       <CategoryCard data={syllabus} header="Syllabus"/>
       <CategoryCard data={question} header="Questions"/>
       <CategoryCard data={syllabus} header="Competative Exam"/>
@@ -192,7 +193,7 @@ const URL = `${origin}${router.asPath}`;
           </div>
         )}
       <div className={styles.container}>
-        <CourseList/>
+        
         <Feeds data={feeds} />
         {/* <Pagination
             activePage={pages}
