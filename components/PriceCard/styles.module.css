@@ -94,7 +94,11 @@
   outline: none;
   text-align: center;
   width: 100%;
-  display: block;
+  /* display: block; */
+  background-color: #2f57ef;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .priceBuyIcon {
