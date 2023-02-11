@@ -242,7 +242,7 @@
 }
 
 .thumbnail {
-  padding: 20px;
+  padding: 5px;
   border-radius: 6px;
   background-color: white;
   overflow: hidden;
@@ -257,7 +257,7 @@
 }
 
 .featureBox {
-  padding: 20px;
+  padding: 5px;
   border-radius: 6px;
   background: white;
   overflow: hidden;
