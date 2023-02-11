@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .detailDiv{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .detailDivHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .detailDivMessage{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .detailDivMessageClose{
+    display: none;
+    flex-direction: column;
+
+  }
+
+  .nText{
+    font-size: 14px;
+  }
+  .nMessage{
+    font-size: 14px;
+  }
+
+  .nSeen{
+    font-size: 14px;
+    color:red
+  }

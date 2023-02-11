@@ -1,4 +1,4 @@
-import styles from "./UserNav.module.css";
+import styles from "./InstructorNav.module.css";
 import { useState, useEffect, useContext } from "react";
 import {
   HomeOutlined,
@@ -14,7 +14,7 @@ import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 
 import Link from "next/link";
 
-const InstuctorNav = () => {
+const InstructorNav = () => {
   const [current, setCurrent] = useState("");
   const [open, setOpen] = useState(false);
 
@@ -138,4 +138,4 @@ const InstuctorNav = () => {
     </div>
   );
 };
-export default InstuctorNav;
+export default InstructorNav;

@@ -1,0 +1,182 @@
+.courseContent{
+    padding: 20px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0px 6px 34px rgba(215, 216, 222, 0.41);
+    border-radius: 6px;
+    margin-top: 30px !important;
+}
+
+.courseTitleStyle{
+    margin-bottom: 24px;
+    font-size: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e6e3f14f;
+}
+
+.accordionItem{
+    background: transparent;
+    border-radius: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    cursor: pointer;
+
+}
+.accordionHeader{
+    padding: 0px 20px 20px 0;
+    background-color: transparent;
+    box-shadow: none;
+    margin-bottom: 0;
+    font-size: 28px;
+    line-height: 1.23;
+}
+
+.accordionButton{
+    color: #192335;
+    display: block;
+    font-size: 18px;
+    line-height: 27px;
+    outline: none;
+    text-decoration: none;
+    box-shadow: none;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    font-weight: 600;
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    align-items: center;
+    margin: 0;
+    max-width: 100%;
+    text-transform: none;
+}
+
+.accordionButtonActive{
+    color: #2f57ef;
+    display: block;
+    font-size: 18px;
+    line-height: 27px;
+    outline: none;
+    text-decoration: none;
+    box-shadow: none;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    font-weight: 600;
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    align-items: center;
+    margin: 0;
+    max-width: 100%;
+    text-transform: none;
+}
+
+.timeBadge{
+    margin-left: 0!important;
+    background: #F6F6F6;
+    padding: 5px 7px;
+    font-size: 12px;
+    display: flex;
+    height: 22px;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+
+
+}
+
+.cardBody{
+    padding: 20px 20px 20px 0;
+    border-top: 0;
+    background: transparent;
+    padding-right: 0 !important;
+    flex: 1 1 auto;
+
+}
+
+.listStyle{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.listContent{
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #6b7385;
+    display: list-item;
+}
+
+.link{
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: #192335;
+    outline: none;
+}
+.courseContentLeft{
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+
+}
+
+.courseContentRight{
+    margin: 0 -5px;
+    margin-bottom: -10px;
+}
+
+.minLabel, .preview{
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 5px;
+    margin-bottom: 10px;
+}
+
+.preview{
+    padding: 0 12px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    border-radius: 6px;
+    background: #2f57ef21;
+    color: #2f57ef;
+}
+
+.text{
+    margin-left: 5px;
+}
+
+.lessonCollapse{
+    max-height: 0;
+    overflow: hidden;
+}
+
+.lessonCollapseShow{
+    max-height:999px;
+}
+
+.accordionHeadingDiv{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e3f1;
+}
+
+.accordionItemIcon{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 25px;
+}

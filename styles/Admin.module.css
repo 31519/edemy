@@ -1,0 +1,169 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  color: #000;
+}
+
+.link {
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.name,
+.activated,
+.notActivated,
+.instructor,
+.subscriber,
+.admin {
+  font-size: 16px;
+  border-radius: 5px;
+  color: black;
+  font-weight: 900;
+}
+
+.notActivated {
+  color: red;
+}
+
+.nameDiv,
+.activatedDiv,
+.notificationDiv,
+.roleDiv {
+  margin: 10px;
+  display: flex;
+  justify-content: start;
+}
+
+.activated {
+  color: green;
+}
+
+.admin {
+  color: blue;
+}
+
+.nameDiv {
+  width: 200px;
+}
+
+.activatedDiv {
+  width: 150px;
+}
+
+.avatar {
+  border: 2px solid gray;
+  width: 100%;
+  height: 100%;
+}
+
+.instructor {
+  color: blue;
+}
+
+.avatarDiv {
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+}
+
+.buttonNotify{
+  color: white;
+  background-color: rgb(32, 28, 28);
+  font-size: 14px;
+}
+
+.notActivatedIcon{
+  display:none
+}
+
+.activatedIcon{
+  display:none
+}
+
+.notificationIcon{
+  display: none
+}
+.activatedDivIcon{
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .avatarDiv {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  .avatar{
+    width: 40px;
+    height: 40px;
+  }
+
+  .nameDiv {
+    width: 100%;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .activatedDiv {
+    width: 100px;
+  }
+
+  .activated,
+  .notActivated {
+    font-size: 14px;
+  }
+  .name,
+  .activated,
+  .notActivated,
+  .instructor,
+  .subscriber,
+  .notification,
+  .admin {
+    font-size: 12px;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+
+  .roleDiv {
+    display: none;
+  }
+
+  .notActivatedIcon{
+    display:inline;
+    color: red;
+  }
+
+  .activatedIcon{
+    display:inline;
+    color: green;
+  }
+
+  .notificationIcon{
+    display: inline;
+    color: blue;
+  }
+
+  .notification{
+    display: none;
+  }
+
+  .activatedDivIcon{
+    display: inline;
+  }
+  .activatedDiv{
+    display: none;
+  }
+}

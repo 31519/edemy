@@ -1,0 +1,194 @@
+
+/* Detail user */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  color: #000;
+}
+
+.link {
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.name,
+.activated,
+.notActivated,
+.instructor,
+.subscriber,
+.admin {
+  font-size: 16px;
+  border-radius: 5px;
+  color: black;
+  font-weight: 900;
+}
+
+.notActivated {
+  color: red;
+}
+
+.nameDiv,
+.activatedDiv,
+.roleDiv {
+  margin: 10px;
+  display: flex;
+  justify-content: start;
+}
+
+.activated {
+  color: green;
+}
+
+.admin {
+  color: blue;
+}
+
+.nameDiv {
+  width: 200px;
+}
+
+.activatedDiv,
+.notActivated {
+  width: 150px;
+}
+
+.avatar {
+  border: 2px solid gray;
+}
+
+.instructor {
+  color: blue;
+}
+
+.avatarDiv {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.headDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #bfb7b7;
+}
+
+.Div1 {
+}
+
+.Div2 {
+  color: blue;
+}
+
+.aboutDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+}
+
+.text1{
+    color:red;
+}
+.text2{
+    color:rgb(17, 0, 255);
+}
+.text3{
+    color:green
+}
+
+@media (max-width: 800px) {
+  .headDiv {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    border-bottom: 1px solid #bfb7b7;
+  }
+}
+
+
+
+/* for instructor */
+
+.forInstructor{
+}
+
+.noInstructor{
+    display: none;
+}
+
+
+
+.inputField {
+    width: 100%;
+    margin: 5px 2px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #c1bfbf;
+  }
+
+
+
+
+
+  
+  .buttonField {
+    width: 100%;
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #c1bfbf;
+    height: 40px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient(90deg, #0f9178, #19a1b7, #f706d2);
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 10px 0px;
+  }
+  
+  .areaField{
+    width: 100%;
+    margin: 5px 2px;
+    border-radius: 5px;
+    border: 1px solid #c1bfbf;
+  
+  }
+  
+  .password{
+    display: flex;
+    justify-content: space-between;
+    align-items:center
+}
+
+@media (max-width: 800px) {
+
+    .headerDiv{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding:10px
+    }
+    
+
+
+    
+      
+    }
+
+
+

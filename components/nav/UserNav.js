@@ -8,15 +8,35 @@ import {
   SettingOutlined,
   HistoryOutlined,
   UserOutlined,
+  BellOutlined,
 } from "@ant-design/icons";
 
-import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
+import axios from "axios";
 
+import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
+// import { IoNotificationsSharp } from "react-icons/io";
 import Link from "next/link";
 
 const UserNav = () => {
   const [current, setCurrent] = useState("");
+  const [notification, setNotification] = useState([]);
   const [open, setOpen] = useState(false);
+
+  // fecth notification
+
+  const fetchNotification = async () => {
+    try {
+      const { data } = await axios.get(`/api/my-notifications`);
+      setNotification(data);
+      console.log("notify", data);
+    } catch (err) {
+      console.log("notify", err);
+    }
+  };
+
+  useEffect(() => {
+    fetchNotification();
+  }, []);
 
   useEffect(() => {
     process.browser && setCurrent(window.location.pathname);
@@ -69,6 +89,22 @@ const UserNav = () => {
               </span>
             </Link>
           </li>
+          <li className={styles.list}>
+            <Link className={styles.link} href="/user/profile/my-notification">
+              <div className={styles.notificationDiv}>
+                <span className={styles.spanIcon}>
+                  <BellOutlined className={styles.notificationIcon} />
+                </span>
+                <span className={styles.badge}>
+                  {notification && notification.length}
+                </span>
+              </div>
+              <span className={open ? styles.spanName1 : styles.spanName2}>
+                Notification
+              </span>
+            </Link>
+          </li>
+
           <li className={styles.list}>
             <Link className={styles.link} href="/user/instructor-signup">
               <span className={styles.spanIcon}>

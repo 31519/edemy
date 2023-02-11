@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inputField {
+    width: 100%;
+    margin: 5px 2px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #c1bfbf;
+  }
+  
+  .buttonField {
+    width: 100%;
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #c1bfbf;
+    height: 40px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient(90deg, #0f9178, #19a1b7, #f706d2);
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 10px 0px;
+  }
+
+  .areaField{
+    width: 100%;
+    margin: 5px 2px;
+    border-radius: 5px;
+    border: 1px solid #c1bfbf;
+  
+  }
+
+  .detailDiv{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .detailDivHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .detailDivMessage{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .detailDivMessageClose{
+    display: none;
+    flex-direction: column;
+
+  }
+
+  .nText{
+    font-size: 14px;
+  }
+  .nMessage{
+    font-size: 14px;
+  }
+
+  .nSeen{
+    font-size: 14px;
+    color:blue
+  }

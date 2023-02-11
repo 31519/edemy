@@ -1,0 +1,41 @@
+
+/* courses requirement and pre */
+.requirementDiv{
+    padding: 20px;
+    border-radius: 6px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0px 6px 34px rgba(215, 216, 222, 0.586);
+    margin-top: 30px;
+  }
+  
+  .requirementRow{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .requirementTitleStyle{
+    font-size: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e6e3f14f;
+    color: #192335;
+  }
+  
+  .requirementList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .requirementListStyle{
+    margin-top: 0;
+    font-size: 16px;
+    display: flex;
+    margin: 7px 0;
+    line-height: 1.45;
+    color: #6b7385;
+  }
+  .requirementIcon{
+    color: green;
+    margin-right: 10px;
+  }

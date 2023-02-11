@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 import { SyncOutlined } from "@ant-design/icons";
-import styles from "./InstructorRoute.module.css";
+import styles from "./AdminRoute.module.css";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-import InstructorNav from "../nav/InstructorNav";
+import AdminNav from "../nav/AdminNav";
 
-const InstructorRoute = ({ children }) => {
+const AdminRoute = ({ children }) => {
   // state
   const [ok, setOk] = useState(false);
 
   //   router
   const router = useRouter();
 
-  const fetchInstructor = async () => {
+  const fetchAdmin = async () => {
     try {
-      const { data } = await axios.get("/api/current-instructor");
+      const { data } = await axios.get("/api/admin-route");
       //   console.log(data);
       if (data.ok) setOk(true);
     } catch (err) {
@@ -26,7 +26,7 @@ const InstructorRoute = ({ children }) => {
   };
 
   useEffect(() => {
-    fetchInstructor();
+    fetchAdmin();
   }, []);
   return (
     <>
@@ -39,7 +39,7 @@ const InstructorRoute = ({ children }) => {
         <div className={styles.container}>
           <div className={styles.div1}>
             <div className={styles.userNav}>
-              <InstructorNav  />
+              <AdminNav  />
             </div>
             <div className={styles.childrenDiv}>{children}</div>
           </div>
@@ -49,4 +49,4 @@ const InstructorRoute = ({ children }) => {
   );
 };
 
-export default InstructorRoute;
+export default AdminRoute;

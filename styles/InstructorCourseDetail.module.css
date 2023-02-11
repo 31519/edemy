@@ -1,0 +1,172 @@
+.courseDiv {
+    display: flex;
+    flex-direction: row;
+    background: #edf8fb;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    
+  }
+  
+  .courseDiv:hover .name{
+      color: blue;
+  
+  }
+  
+  .link {
+    text-decoration: none;
+  }
+  
+  .name {
+    color: black;
+    margin: 0px 10px;
+  }
+  
+  .imageDiv {
+    width: 300px;
+    height: 200px;
+    position: relative;
+  }
+  
+  .image {
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .div2 {
+    padding: 15px 10px;
+  }
+  
+  .danger{
+      color: red;
+  }
+  .success{
+      color: green;
+  
+  }
+  .primary{
+      color: rgb(14, 212, 243);
+  }
+
+  .buttonField {
+    width: 60%;
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #c1bfbf;
+    height: 40px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient(90deg, #0f9178, #19a1b7, #f706d2);
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 10px 0px;
+  }
+
+
+  .buttonDiv{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .buttonSection{
+    height: 35px;
+    border-radius: 5px;
+    background-color: rgb(11 187 57);
+    display: flex;
+    justify-content: center;
+    margin: 1px;
+    padding: 5px;
+    align-items: center;
+  }
+
+  .buttonText{
+    color: white;
+    font-size: 16px;
+    margin: 0px;
+    font-weight: 900;
+    letter-spacing: 0.9px;
+  }
+
+  .buttonPara{
+    color: white;
+    font-size: 12px;
+    margin: 0px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+  }
+
+
+  .sectionDiv{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nameDiv{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .addLessonButton{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+  }
+  .sectionHeader{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .videoLength{
+    color:blue;
+    font-size: 12px;
+
+  }
+
+  .avatar{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight:900;
+    line-height: 30px;
+    list-style: none;
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;;
+    border: 1px solid transparent;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: black;
+  }
+  
+  @media (max-width: 800px) {
+    .courseDiv {
+      display: flex;
+      flex-direction: column;
+
+    }
+  
+    .div1 {
+      width: 100%;
+      height: 200px;
+    }
+    .imageDiv {
+      width: 100%;
+      height: 150px;
+      position: relative;
+    }
+  
+    .image {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  

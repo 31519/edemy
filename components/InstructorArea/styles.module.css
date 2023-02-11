@@ -1,0 +1,109 @@
+.instructor{
+    padding: 20px;
+    border-radius: 6px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0px 6px 34px rgba(215, 216, 222, 0.41);
+    margin-top: 30px;
+  
+  }
+  
+  .instructorAuthor{
+    padding: 40px 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    border: 0;
+  }
+  .instructorTitle{
+    margin-bottom: 30px ;
+  }
+
+  .instructorTitleStyle{
+    margin-bottom: 24px;
+    font-size: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e6e3f14f;
+  }
+
+  .instructorMedia{
+    align-items: center;
+  }
+
+  .instructorThumbnail{
+    margin-bottom: 30px;
+  }
+
+  .link{
+    color: #192335;
+    text-decoration: none;
+    outline: none;
+    transition: 0.3s;
+    
+  }
+
+  .instructorImage{
+    border: 0;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    position: relative !important;
+    margin-bottom: 0;
+    max-height: initial;
+    margin-right: 0;
+    object-fit: cover;
+    border-radius: 100%;
+
+  }
+
+  .instructorMediaBody{
+    margin-top: 20px;
+  }
+
+  .instructorTitle{
+    margin-bottom: 0;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1.24;
+    word-break: break-all;
+    color: #192335;
+    margin: 0;
+  }
+  .instructorProfession{
+    margin-top: 8px;
+    color: #6b7385;
+    display: block;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .instructorList{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: -3px;
+    margin-bottom: 20px ;
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+
+  }
+
+  .instructorListStyle{
+    display: flex;
+    align-items: center;
+    margin: 3px;
+    font-size: 14px;
+    line-height: 15px;
+    color: #6b7385;
+  }
+
+  .instructorListIcon{
+    margin-right:10px ;
+  }
+
+  .instructorDescriptionPara{
+    margin: 6px;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 28px;
+    color: #6b7385;
+  }

@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Avatar, Tooltip } from "antd";
 import { CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
 import Link from "next/link";
-
+import InstructorVideoList from "../../components/InstructorVideoList"
+import styles from "../../styles/instructorIndex.module.css"
 import axios from "axios";
 import InstructorRoute from "../../components/routes/InstructorRoute";
 
@@ -21,9 +22,12 @@ const InstructorIndex = () => {
   const myStyle = { marginTop: "-15px", fontSize: "10px" };
   return (
     <InstructorRoute>
-      <h1 className="jumbotron text-center square">Instructor Course</h1>
+      <div className={styles.container}>
+        <InstructorVideoList courses={courses} />
+      </div>
+      {/* <h1 className="jumbotron text-center square">Instructor Course</h1> */}
 
-      {courses &&
+      {/* {courses &&
         courses.map((course) => (
           <>
             <div className="media pt-2">
@@ -69,7 +73,7 @@ const InstructorIndex = () => {
               </div>
             </div>
           </>
-        ))}
+        ))} */}
     </InstructorRoute>
   );
 };

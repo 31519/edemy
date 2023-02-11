@@ -16,10 +16,12 @@ const AddLessonForm = ({
   handleAddLesson,
   uploadButtonText,
   setUploadButtonText,
+  slug
 }) => {
   return (
     <div className="container pt">
       <form onSubmit={handleAddLesson}>
+      {slug}
         <input
           type="text"
           className="form-control square"

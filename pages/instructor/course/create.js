@@ -127,7 +127,6 @@ const CourseCreate = () => {
             imagePreview={imagePreview}
             uploadButtonText={uploadButtonText}
             setImagePreview={setImagePreview}
-            handleSubmit={handleImage}
             handleImage={handleImage}
             handleImageRemove={handleImageRemove}
             handleSubmit={handleSubmit}
@@ -135,7 +134,7 @@ const CourseCreate = () => {
         }
       </div>
 
-      <pre>{JSON.stringify(paid, null, 4)}</pre>
+      <pre>{JSON.stringify(category, null, 4)}</pre>
       <pre>{JSON.stringify(price, null, 4)}</pre>
     </InstructorRoute>
   );

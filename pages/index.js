@@ -12,6 +12,7 @@ import { LoadingOutlined } from "@ant-design/icons";
 import CategoryCard from "../components/CategoryCard"
 import { GET_FEEDS } from "../graphql/queries";
 import Pagination from "react-js-pagination";
+import CourseList from "../components/CourseList"
 
 const syllabus = [
   {
@@ -191,6 +192,7 @@ const URL = `${origin}${router.asPath}`;
           </div>
         )}
       <div className={styles.container}>
+        <CourseList/>
         <Feeds data={feeds} />
         {/* <Pagination
             activePage={pages}

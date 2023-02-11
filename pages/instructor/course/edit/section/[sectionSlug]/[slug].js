@@ -5,45 +5,41 @@ import { Select } from "antd";
 import Resizer from "react-image-file-resizer";
 import { Avatar, Tooltip, Button, Modal, List, Card } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
-import styles from "../../../../styles/CourseEdit.module.css";
+import styles from "../../../../../../styles/CourseEdit.module.css";
 const { Option } = Select;
 import { useRouter } from "next/router";
-import InstructorRoute from "../../../../components/routes/InstructorRoute";
-import CourseCreateForm from "../../../../components/forms/CourseCreateForm";
-import UpdateLessonForm from "../../../../components/forms/UpdateLessonForm";
+import InstructorRoute from "../../../../../../components/routes/InstructorRoute";
+import AddSectionForm from "../../../../../../components/forms/AddSectionForm";
+import UpdateLessonForm from "../../../../../../components/forms/UpdateLessonForm";
 import { DownOutlined } from "@ant-design/icons";
 // import { Dropdown, Space } from "antd";
 import { SaveOutlined } from "@ant-design/icons";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 
-const CourseEdit = () => {
+const SectionEdit = () => {
   const router = useRouter();
-  const { slug } = router.query;
-  // console.log(slug);
+  const { slug, sectionSlug } = router.query;
 
   const [values, setValues] = useState({});
-  // state
+  const [flag, setFlag] = useState(false);
+  // state for section
   const [name, setName] = useState("");
-  const [image, setImage] = useState({});
-  const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
-  const [price, setPrice] = useState("1");
   const [uploading, setUploading] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [paid, setPaid] = useState(true);
-  const [imagePreview, setImagePreview] = useState("");
-  const [lessons, setLessons] = useState([]);
-  const [section, setSection] = useState([]);
-  const [instructor, setInstructor] = useState({});
+  const [section, setSection] = useState({});
 
   // state for lessons updates\
+  const [lessons, setLessons] = useState([]);
+  const [title, setTitle] = useState("");
   const [visible, setVisible] = useState(false);
   const [current, setCurrent] = useState({});
   const [uploadVideoButtonText, setUploadVideoButtonText] =
     useState("Upload video");
   const [progress, setProgress] = useState(0);
   const [uploadingLesson, setUploadingLesson] = useState(false);
+  const [lessonId, setLessonId] = useState("");
 
   const [preview, setPreview] = useState("");
   const [uploadButtonText, setUploadButtonText] = useState("upload image");
@@ -88,55 +84,53 @@ const CourseEdit = () => {
     }
   };
 
+  // handle edit section button
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
       setLoading(true);
       // console.log(values);
-      const { data } = await axios.put(`/api/course/${slug}`, {
-        name,
-        category,
-        description,
-        price,
-        paid,
-        image,
-      });
+      const { data } = await axios.put(
+        `/api/course/section/${slug}/${sectionSlug}`,
+        {
+          name,
+          description,
+        }
+      );
       setLoading(false);
-      toast("Course Updated !");
+      toast("Section Updated !");
+      setFlag(!flag);
       //   router.push("/instructor");
     } catch (err) {
       setLoading(false);
-      toast(err.response.data);
+      toast("Section update failed");
     }
   };
 
   const handleDrag = (e, index) => {
-    console.log('On Drag=>', index)
+    // console.log('On Drag=>', index)
     e.dataTransfer.setData("itemIndex", index);
   };
 
   const handleDrop = async (e, index) => {
-    console.log("ondrop=>", index)
+    // console.log("ondrop=>", index)
     const movingItemIndex = e.dataTransfer.getData("itemIndex");
     const targetItemIndex = index;
-    let allSection = section;
+    let allLessons = lessons;
 
-    let movingItem = allSection[movingItemIndex];
+    let movingItem = allLessons[movingItemIndex];
     console.log("allLessongindex", movingItem);
-    allSection.splice(movingItemIndex, 1); //remove 1 item from the given index
-    allSection.splice(targetItemIndex, 0, movingItem); // push item after target item index
+    allLessons.splice(movingItemIndex, 1); //remove 1 item from the given index
+    allLessons.splice(targetItemIndex, 0, movingItem); // push item after target item index
 
-    setSection([...allSection]);
+    setLessons([...allLessons]);
     // save the new lessons order in db
-    const { data } = await axios.put(`/api/course/${slug}`, {
-      name,
-      category,
-      description,
-      price,
-      paid,
-      image,
-      section,
-    });
+    const { data } = await axios.put(
+      `/api/course/section-lesson-update/${slug}/${sectionSlug}`,
+      {
+        lessons,
+      }
+    );
     console.log("Lessons Rearrange Response => ", data);
     toast("Lessons Rearranged Successfully");
   };
@@ -192,7 +186,7 @@ const CourseEdit = () => {
     e.preventDefault();
     setUploadingLesson(true);
     const { data } = await axios.put(
-      `/api/course/lesson/${slug}/${current._id}`,
+      `/api/course/lesson-update/${slug}/${section._id}/${lessonId}`,
       current
     );
     setUploadVideoButtonText("Upload video");
@@ -209,60 +203,58 @@ const CourseEdit = () => {
     setUploadingLesson(false);
   };
 
-  const editHandle = (sectionId) => {
-    router.push(`/instructor/course/edit/section/${sectionId}/${slug}`);
+  useEffect(() => {
+    slug && loadSection();
+  }, [slug, flag, router]);
+
+  const loadSection = async () => {
+    const { data } = await axios.get(`/api/course/${slug}/${sectionSlug}`);
+    //   setValues(tit)
+    if (data) {
+      setName(data[0].section[0].name);
+      setDescription(data[0].section[0].description);
+      setLessons(data[0].section[0].lessons);
+      setSection(data[0].section[0]);
+      setCurrent(data[0].section[0].lessons);
+      console.log("data", data);
+    }
   };
 
-  useEffect(() => {
-    slug && loadCourse();
-  }, [slug]);
-
-  const loadCourse = async () => {
-    const { data } = await axios.get(`/api/course/${slug}`);
-    //   setValues(tit)
-
-    setName(data.name);
-    setCategory(data.category);
-    setDescription(data.description);
-    data && data.image && setImage(data.image);
-    setPrice(data.price);
-    setPaid(data.paid);
-    setSection(data.section);
-    setLessons(data.section.lessons);
-    data && setInstructor(data.instructor);
-    data && console.log("values data", instructor);
+  const readLesson = async (lessonId) => {
+    try {
+      setLoading(true);
+      // setLessonId(sec._id);
+      setVisible(true);
+      const { data } = await axios.get(
+        `/api/course/read-lesson/${slug}/${section._id}/${lessonId}`
+      );
+      //   setValues(tit)
+      if (data) {
+        console.log("dta", data);
+        setCurrent(data[0].lessons[0]);
+        console.log("data", data);
+      }
+      setLoading(false);
+    } catch (err) {
+      console.log(err);
+      setLoading(false);
+    }
   };
 
   return (
     <InstructorRoute>
-      <h1 className="jumbotron text-center square">Update Course</h1>
+      <h1 className="jumbotron text-center square">Update Section</h1>
       <div className="pt-3 pb=3">
         {
-          <CourseCreateForm
+          <AddSectionForm
             name={name}
             setName={setName}
-            category={category}
-            setCategory={setCategory}
             description={description}
             setDescription={setDescription}
-            price={price}
-            setPrice={setPrice}
-            setPaid={setPaid}
-            paid={paid}
-            uploading={uploading}
-            setUploading={setUploading}
             loading={loading}
             setLoading={setLoading}
-            preview={preview}
-            setPreview={setPreview}
-            imagePreview={imagePreview}
-            uploadButtonText={uploadButtonText}
-            setImagePreview={setImagePreview}
-            handleImage={handleImage}
-            handleImageRemove={handleImageRemove}
             handleSubmit={handleSubmit}
             editPage={true}
-            image={image}
           />
         }
       </div>
@@ -272,10 +264,12 @@ const CourseEdit = () => {
 
       <hr />
       {/* List */}
+      {/* <p>{section.title}</p> */}
+      {/* <p>{JSON.stringify({ section })}</p> */}
 
       <div onDragOver={(e) => e.preventDefault()}>
-        {section &&
-          section.map((sec, index) => (
+        {lessons &&
+          lessons.map((sec, index) => (
             <div
               className={styles.selectMenu}
               draggable
@@ -289,87 +283,43 @@ const CourseEdit = () => {
                     <p className={styles.indexPara}>{index + 1}</p>
                   </div>
                   <div>
-                    <p className={styles.namePara}>{sec.name}</p>
+                    <p className={styles.namePara}>{sec.title}</p>
                   </div>
                 </div>
-                <div onClick={() => editHandle(sec._id)}>
-                  <p className={styles.editPara}>Edit</p>
+                <div onClick={() => {
+                  readLesson(sec._id)
+                }
+                }>
+                  <p className={styles.editPara}>{loading? "loading...":"Edit"}</p>
                 </div>
               </div>
-              <ul className={styles.options}>
-                {sec.lessons &&
-                  sec.lessons.map((lesson, index) => (
-                    <li className={styles.option}>
-                      <div className={styles.optionFirst}>
-                        <div>
-                          <p className={styles.listIndex}>{index + 1}</p>
-                        </div>
-                        <div>
-                          <p className={styles.listTitle}>{lesson.title}</p>
-                        </div>
-                      </div>
-                      <div className={styles.divLength}>
-                        <p className={styles.listLength}>12 min</p>
-                      </div>
-                    </li>
-                  ))}
-              </ul>
+
+              <Modal
+                title="Update lesson"
+                centered
+                visible={visible}
+                onCancel={() => {
+                  setLoading(false);
+                  setVisible(false);
+                }}
+              >
+                <UpdateLessonForm
+                  current={current}
+                  setCurrent={setCurrent}
+                  handleUpdateLesson={handleUpdateLesson}
+                  handleVideo={handleVideo}
+                  uploadVideoButtonText={uploadVideoButtonText}
+                  setUploadVideoButtonText={setUploadVideoButtonText}
+                  progress={progress}
+                  uploadingLesson={uploadingLesson}
+                />
+                {/* <pre>{JSON.stringify(current, null, 4)}</pre> */}
+              </Modal>
             </div>
           ))}
       </div>
-
-      {/* <div className="row pb-5">
-        <div className="col lesson-list">
-          <h4>{section && section.length} Sections</h4>
-
-          <List
-            onDragOver={(e) => e.preventDefault()}
-            itemLayout="horizontal"
-            dataSource={section && section}
-            renderItem={(item, index) => (
-              <List.Item
-                draggable
-                onDragStart={(e) => handleDrag(e, index)}
-                onDrop={(e) => handleDrop(e, index)}
-              >
-                <List.Item.Meta
-                  onClick={() => {
-                    setVisible(true);
-                    setCurrent(item);
-                  }}
-                  avatar={<Avatar>{index + 1} </Avatar>}
-                  title={item.name}
-                ></List.Item.Meta>
-
-                <DeleteOutlined
-                  onClick={() => handleDelete(index)}
-                  className="text-danger"
-                />
-              </List.Item>
-            )}
-          />
-        </div>
-      </div> */}
-      <Modal
-        title="Update lesson"
-        centered
-        visible={visible}
-        onCancel={() => setVisible(false)}
-      >
-        <UpdateLessonForm
-          current={current}
-          setCurrent={setCurrent}
-          handleUpdateLesson={handleUpdateLesson}
-          handleVideo={handleVideo}
-          uploadVideoButtonText={uploadVideoButtonText}
-          setUploadVideoButtonText={setUploadVideoButtonText}
-          progress={progress}
-          uploadingLesson={uploadingLesson}
-        />
-        {/* <pre>{JSON.stringify(current, null, 4)}</pre> */}
-      </Modal>
     </InstructorRoute>
   );
 };
 
-export default CourseEdit;
+export default SectionEdit;

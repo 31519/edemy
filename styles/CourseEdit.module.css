@@ -1,0 +1,130 @@
+
+
+.selecMenu{
+    width: 100%;
+    margin: 140px auto;
+}
+
+.selectBtn, .options, .option {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.selectBtn{
+    justify-content: space-between;
+
+}
+
+.options{
+    list-style: none;
+}
+
+.editPara {
+    width: 97px;
+    height: 33px;
+    border-radius: 5px;
+    color: #fffefe;
+    font-size: 16px;
+    background-color: #f30043;
+    margin: 0px 10px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.indexPara{
+    color: white;
+    background-color: #991f8a;
+    width: 30px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px 10px;
+    font-weight: 900;
+}
+
+.selectMenu, .selectBtn{
+}
+/* .selectBtn i{
+    font-size: 25px;
+    transition: 0.3s;
+} */
+/* .selectMenu.active,  .selectBtn i{
+    transform: rotate(-180deg);
+} */
+.selectMenu, .options{
+}
+.selectMenu.active, .options{
+    display: block;
+}
+.options, .option{
+}
+.options, .option:hover{
+    background: #F2F2F2;
+}
+/* .option i{
+    font-size: 25px;
+    margin-right: 12px;
+} */
+/* .option, .option-text{
+    font-size: 18px;
+    color: #333;
+} */
+.namePara{
+    color:#343232
+}
+
+.listIndex{
+    color: white;
+    background-color: #6a686a;
+    width: 30px;
+    height: 32px;
+    /* border-radius: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 10px;
+    font-weight: 900;
+}
+
+.listTitle{
+    color:#343232
+
+}
+
+.listLength{
+    color:blue
+}
+
+.optionFirst{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width:80%;
+    align-items: center;
+}
+
+.option{
+    justify-content:space-between
+}
+.divLength{
+    
+}
+
+@media (max-width: 800px) {
+    .editPara {
+        width: 45px;
+        height: 33px;
+        border-radius: 5px;
+        color: #fffefe;
+        font-size: 16px;
+        background-color: #f30043;
+        margin: 0px 10px;
+        font-weight: 900;
+        text-align: center;
+    }
+  }
